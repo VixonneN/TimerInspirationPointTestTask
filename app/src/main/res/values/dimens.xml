@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="btn_margin_30">30dp</dimen>
+    <dimen name="view_depth">1dp</dimen>
+    <dimen name="view_length">60dp</dimen>
+    <dimen name="text_size_50">50sp</dimen>
+    <dimen name="text_size_40">40sp</dimen>
+    <dimen name="view_margin_20">20sp</dimen>
+    <dimen name="card_view_height">300dp</dimen>
+</resources>

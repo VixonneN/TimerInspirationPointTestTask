@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.fragment.TimerFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/card_view_height"
+        android:backgroundTint="?colorButtonNormal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="@dimen/btn_margin_30"
+        app:cardElevation="@dimen/btn_margin_30"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/timer_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/btn_margin_30"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_40"
+                app:layout_constraintBottom_toTopOf="@id/first_view"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:text="2:14" />
+
+            <View
+                android:id="@+id/first_view"
+                android:layout_width="@dimen/view_length"
+                android:layout_height="@dimen/view_depth"
+                android:background="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/scope_one"
+                app:layout_constraintStart_toStartOf="@id/scope_one"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/second_view"
+                android:layout_width="@dimen/view_length"
+                android:layout_height="@dimen/view_depth"
+                android:background="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/scope_two"
+                app:layout_constraintStart_toStartOf="@id/scope_two"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view_third_center"
+                android:layout_width="@dimen/view_depth"
+                android:layout_height="@dimen/view_length"
+                android:layout_marginTop="@dimen/btn_margin_30"
+                android:background="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/scope_one"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/timer_tv" />
+
+            <TextView
+                android:id="@+id/scope_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/btn_margin_30"
+                android:layout_marginTop="20sp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_50"
+                app:layout_constraintEnd_toStartOf="@id/view_third_center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/first_view"
+                tools:text="14" />
+
+            <TextView
+                android:id="@+id/scope_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/view_margin_20"
+                android:layout_marginEnd="@dimen/btn_margin_30"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_50"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/view_third_center"
+                app:layout_constraintTop_toBottomOf="@id/second_view"
+                tools:text="2" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/add_scope_one_ibtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/btn_margin_30"
+        android:layout_marginTop="@dimen/btn_margin_30"
+        android:background="@color/white"
+        android:contentDescription="@string/empty"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_view"
+        />
+
+    <ImageButton
+        android:id="@+id/remove_scope_one_ibtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/btn_margin_30"
+        android:layout_marginTop="@dimen/btn_margin_30"
+        android:background="@color/white"
+        android:contentDescription="@string/empty"
+        android:src="@drawable/ic_baseline_remove_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_scope_one_ibtn" />
+
+    <ImageButton
+        android:id="@+id/add_scope_two_ibtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/btn_margin_30"
+        android:layout_marginTop="@dimen/btn_margin_30"
+        android:background="@color/white"
+        android:contentDescription="@string/empty"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_view" />
+
+    <ImageButton
+        android:id="@+id/remove_scope_two_ibtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/btn_margin_30"
+        android:layout_marginTop="@dimen/btn_margin_30"
+        android:background="@color/white"
+        android:contentDescription="@string/empty"
+        android:src="@drawable/ic_baseline_remove_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_scope_two_ibtn" />
+
+    <Button
+        android:id="@+id/startBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/btn_margin_30"
+        android:layout_marginEnd="@dimen/btn_margin_30"
+        android:layout_marginBottom="@dimen/btn_margin_30"
+        android:text="@string/start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="?colorButtonNormal"
+        />
+
+    <Button
+        android:id="@+id/stopBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/btn_margin_30"
+        android:layout_marginEnd="@dimen/btn_margin_30"
+        android:layout_marginBottom="@dimen/btn_margin_30"
+        android:text="@string/stop"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="?colorButtonNormal"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
